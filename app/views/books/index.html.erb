@@ -6,15 +6,32 @@
   <span>
     <%= link_to book.title, book_path(book.id) %>
   </span>
-  
+
   <p>Body</p>
   <span>
     <%= link_to book.body, book_path(book.id) %>
   </span>
-  
+
+  <tbody>
+    <tr>
+      <td><%= link_to"Show","/books/#{book.id}" %></td>
+      <td><%= link_to"Edit","/books/#{book.id}/edit" %></td>
+      <td><%= link_to"Destroy","/books/#{book.id}", method: :delete "data-confirm" => "Are you sure?" %></td>
+    </tr>
+  </tbody>
+
 <% end %>
 
 <h1>New book</h1>
+
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>件のエラーが発生しました
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= form_with model: @book do |f| %>
   <h4>Title</h4>

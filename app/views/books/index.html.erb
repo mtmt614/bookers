@@ -1,16 +1,14 @@
 <h1>Books</h1>
 
+<table>
+
 <% @books.each do |book| %>
 
   <p>Title</p>
-  <span>
-    <%= link_to book.title, book_path(book.id) %>
-  </span>
+    <span><%= book.title %></span>
 
   <p>Body</p>
-  <span>
-    <%= link_to book.body, book_path(book.id) %>
-  </span>
+    <span><%= book.body %></span>
 
   <tbody>
     <tr>
@@ -21,6 +19,8 @@
   </tbody>
 
 <% end %>
+
+</table>
 
 <h1>New book</h1>
 

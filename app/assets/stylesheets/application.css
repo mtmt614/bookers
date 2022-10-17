@@ -21,17 +21,18 @@
 }
  
 body {
-   display: block;
    background-color: #fff;
+   display: block;
 }
 
-.h1 {
-   font-size: 2em;
+h1 {
+   font-size: 30px;
+   padding: 20px;
+   font-weight: bold;
 }
 
-.p {
+p  {
    font-size: 13px;
    line-height: 18px;
    margin: 33px;
 }
-

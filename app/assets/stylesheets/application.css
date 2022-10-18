@@ -14,19 +14,17 @@
  *= require_self
  */
  
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+html {
+   display: block;
 }
 
 body {
    background-color: #fff;
    color: #333;
-   margin: 33px;
-   font-size: 13px;
    font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 13px;
    line-height: 18px;
+   margin: 33px;
 }
 
 h1 {
@@ -40,9 +38,12 @@ h1 {
 }
 
 h2 {
+   display: block;
    font-size: 1.5em;
    margin-block-start: 0.83em;
    margin-block-end: 0.83em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
    font-weight: bold;
 }
 
@@ -94,22 +95,33 @@ label {
    cursor: default;
 }
 
-form {
-   display: block;
-   margin-top: 0px;
-   margin-bottom: 10px;
-}
-
 action {
    margin-bottom: 10px;
-}
-
-p {
-   display: block;
-   margin-block-start: 1em;
-   margin-block-end: 1em;
 }
 
 div {
    display: block;
 }
+
+div.fierd, div.action {
+   margin-bottom: 10px;
+}
+
+a {
+   color: #000;
+}
+
+a:visited {
+   color: #666;
+}
+
+a:hover {
+	color:#ffffff;
+	background-color: #000000;
+	cursor: pointer;
+}
+
+#notice {
+   color: green;
+}
+

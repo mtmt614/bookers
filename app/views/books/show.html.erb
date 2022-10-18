@@ -1,14 +1,27 @@
-<div>
-<%= flash[:notice] %>
-</div>
+<!DOCTYPE html>
+   <html lang="ja">
+    <head>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="application.css" />
+      <title>課題</title>
+    </head>
+　　
+　　<body>
+      <div>
+        <%= flash[:notice] %>
+      </div>
+     
+      <p>
+      <strong>Title:</strong>
+      <%= @book.title %>
+      </p>
+      
+      <p>
+      <strong>Body:</strong>
+      <%= @book.body %>
+      </p>
 
-<h2>Title:</h2>
-<p><%= @book.title %></p>
-
-<h2>Body:</h2>
-<p><%= @book.body %></p>
-
-<%= link_to "Edit", edit_book_path(@book.id) %>
-
-<%= link_to "Back", :books %>
-
+      <a> <%= link_to "Edit", edit_book_path(@book.id) %> |
+      <%= link_to "Back", :books %> </a>
+    </body>
+   </html>
